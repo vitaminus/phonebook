@@ -1,0 +1,4 @@
+%h2 Add Phone Number
+= form_for(@phone) do |f|
+  = render 'fields', f: f
+  %div= f.submit "Add New", id: "add-new", class: "btn btn-large"

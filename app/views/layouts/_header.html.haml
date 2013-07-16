@@ -1,0 +1,9 @@
+.navbar.navbar-fixed-top
+  .navbar-inner
+    .container
+      = link_to "PhoneBook", root_path, class: "brand"
+      .nav-collapse.collapse
+        %ul.nav.pull-right
+          %li=link_to "New Phone", new_phone_path, id: "new_link", remote: true
+          - if logged_in?
+            %li= link_to "Admin page", admin_path, remote: true, id: "admin"

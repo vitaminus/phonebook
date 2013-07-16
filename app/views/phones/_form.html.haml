@@ -1,0 +1,14 @@
+#edit-phone
+  .row
+    = form_for(@phone, remote:true) do |f|
+      = render 'shared/error_messages', object: f.object
+      .offset2  
+        .container-inline
+          .span3
+            /= f.label :name
+            = f.text_field :name, placeholder: "Enter name"
+          .span3
+            /= f.label :phone
+            = f.telephone_field :phone, placeholder: "Enter phone"
+          .span1
+            = f.submit "Add Phone", class: "add-new-submit-button"

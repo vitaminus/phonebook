@@ -1,0 +1,7 @@
+:plain
+  $('.block').html("#{j render("results")}")
+
+  $('.pagination a').on('click', function() {
+      $.getScript(this.href)
+      return false
+    })

@@ -1,0 +1,7 @@
+.row
+  .offset2
+    = form_tag phones_path, method: 'get', remote:true, id: "phones_search" do
+      .container-inline
+        .edit-keys-wrapper      
+          = text_field_tag :search, params[:search], class: "input-xxlarge", placeholder: "Find phone number by name"
+        = image_submit_tag("search.btn.png", id: "edit-submit")

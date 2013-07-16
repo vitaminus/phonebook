@@ -1,0 +1,22 @@
+:plain
+  $('#new_link').hide().after(function() {
+    $('#new-phone').append("#{j render("form")}")
+  })
+  $("#phone_phone").mask("(999) 999-99-99")
+
+
+  $(document).ready(function() {
+    var $submit = $("input[type=submit]"),
+        $inputs = $('input#phone_name, input#phone_phone');
+
+    function checkEmpty() {
+        // filter over the empty inputs
+        return $inputs.filter(function() {
+            return !$.trim(this.value);
+        }).length === 0;
+    }
+
+    $inputs.on('keyup blur', function() {
+        $submit.prop("disabled", !checkEmpty());
+    }).keyup(); // trigger an initial blur
+});

@@ -1,0 +1,11 @@
+.span7.search-result
+  %table.table
+    %thead
+      %tr
+        %th Name
+        %th Phone
+    - @phones.each do |phone|
+      %tr
+        %td= phone.name
+        %td= phone.phone
+  = will_paginate @phones, renderer: BootstrapPagination::Rails

@@ -1,0 +1,8 @@
+:plain
+  $('a#admin').hide().after( function() {
+    $('.block').html("#{j render("admin")}")
+  })
+  $('.pagination a').on('click', function() {
+      $.getScript(this.href)
+      return false
+    })

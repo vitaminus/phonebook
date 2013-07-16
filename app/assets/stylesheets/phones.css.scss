@@ -1,0 +1,106 @@
+// Place all the styles related to the Phones controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+html, body {
+  min-height: 90%;
+}
+
+#message.success {
+  display: block;
+  min-height: 50px;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  position: absolute;
+  background-color: #DFF0D8;
+  border-color: #D6E9C6;
+  color: #1C9B47;
+  z-index: 9999;
+  text-align: center;
+}
+
+/* search form */
+.search-block {
+  margin-top: 45px;
+}
+
+.container-inline {
+  border: 3px solid #D4E1EE;
+  display: block;
+  height: 42px;
+  width: 620px;
+  margin: 0 0 10px;
+  overflow: hidden;
+}
+.edit-keys-wrapper {
+  display: inline;
+  float: left;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+input#search {
+  width: 546px;
+}
+input#search, input#phone_name, input#phone_phone {
+  border: 1px solid #CCCCCC;
+  color: #999999;
+  display: block;
+  font: italic 1.4em/28px Georgia,"Times New Roman",Times,serif;
+  height: 30px;
+  margin: 0;
+  padding: 5px 15px;
+  border-radius: 0;
+}
+
+input#phone_name, input#phone_phone, input.add-new-submit-button {
+  /*border: 3px solid #D4E1EE;*/
+}
+
+input#phone_name {
+  margin-left: -20px;
+}
+
+input#phone_phone {
+  width: 205px;
+  margin-left: -22px;
+}
+
+input#edit-submit {
+  border: 2px solid #CCCCCC;
+  display: inline;
+  height: 38px;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  width: 38px;
+}
+
+input.add-new-submit-button {
+  color: #fff !important;
+  height: 42px;
+  width: 146px;
+  margin-left: -26px;
+  border: 2px solid #CCCCCC;
+  font: 1.4em/28px Georgia,"Times New Roman",Times,serif;
+}
+input.add-new-submit-button, input.add-new-submit-button:disabled {
+  background-color: #AF3845;
+}
+input.add-new-submit-button:disabled {
+  opacity: 0.5;
+}
+/* Search Results*/
+.search-result {
+  min-height: 600px;
+}
+
+/* Footer */
+footer {
+  padding: 17px 0 18px 0;
+  margin-top: 20px;
+  clear: both;
+}
+footer p {
+  font-size: 16px;
+}

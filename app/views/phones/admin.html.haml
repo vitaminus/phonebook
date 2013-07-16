@@ -1,0 +1,24 @@
+#message
+.search-block
+  = render 'search'
+#new-phone
+.offset2
+  .block
+    .offset1
+      %h2 Administration page
+    .span7
+      %table.table
+        %thead
+          %tr
+            %th Name
+            %th Phone
+            %th 
+        - @phones.each do |phone|
+          %tr
+            %td= phone.name
+            %td= phone.phone
+            %td
+              = link_to "Edit", edit_phone_path(phone), remote: true
+              = link_to "Delete", phone, confirm: "Are you sure?",method: :delete, remote: true
+      /= will_paginate @phones, renderer: BootstrapPagination::Rails
+      = render 'upload_file_form'
