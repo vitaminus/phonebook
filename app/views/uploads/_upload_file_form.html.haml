@@ -1,0 +1,6 @@
+#upload-file
+  = form_for :upload, remote: true do |f| 
+    = token_tag nil
+    = f.label :file, "Upload file:"
+    = f.file_field :file
+    = f.submit "Upload"

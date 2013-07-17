@@ -1,5 +1,5 @@
 :plain
   $('.edit_phone').remove()
-  
+  $('#message').addClass("success").html("#{j flash[:notice] }").fadeOut(6000)
   $('.block').html("#{j render("admin")}")
 

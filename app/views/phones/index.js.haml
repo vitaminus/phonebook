@@ -1,5 +1,5 @@
 :plain
-  $('.block').html("#{j render("results")}")
+  $('.block').html("#{j logged_in? ? render("admin") : render("results") }")
 
   $('.pagination a').on('click', function() {
       $.getScript(this.href)

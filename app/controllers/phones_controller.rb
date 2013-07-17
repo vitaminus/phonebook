@@ -1,4 +1,5 @@
 class PhonesController < ApplicationController
+  
   before_action :phone_find,    only: [:show, :edit, :update, :destroy]
   before_action :all_phones,    only: [:admin, :create, :update, :destroy]
   before_action :authenticated, only: [:admin]
@@ -59,10 +60,8 @@ class PhonesController < ApplicationController
   def admin
     if authenticated
       respond_to do |format|
-        format.html {
-          
-        }
-        format.js {render 'admin'}
+        format.html {}
+        format.js {}
       end
     else
       redirect_to root_path
