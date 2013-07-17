@@ -1,6 +1,6 @@
 :plain
   $('#new_link').hide().after(function() {
-    $('#new-phone').append("#{j render("form")}")
+    $('#new-phone').html("#{j render("form")}")
   })
   $("#phone_phone").mask("(999) 999-99-99")
 

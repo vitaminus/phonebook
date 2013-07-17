@@ -1,16 +1,14 @@
 // Place all the styles related to the Phones controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-html, body {
-  min-height: 90%;
-}
 
-.message.success {
+#message.success {
   display: block;
   min-height: 50px;
   width: 100%;
   top: 0px;
   left: 0px;
+  padding-top: 10px;
   position: absolute;
   background-color: #DFF0D8;
   border-color: #D6E9C6;
@@ -21,7 +19,7 @@ html, body {
 
 /* search form */
 .search-block {
-  margin-top: 45px;
+  margin-top: 145px;
 }
 
 .container-inline {
@@ -95,10 +93,21 @@ input.add-new-submit-button:disabled {
   min-height: 600px;
 }
 
+/* Pagination */
+.pagination {
+  text-align: center;
+}
+
+/* Other */
+.upload {
+  padding-bottom: 50px;
+}
+
 /* Footer */
 footer {
   padding: 17px 0 18px 0;
-  margin-top: 20px;
+  margin-top: 150px;
+  bottom: 0;
   clear: both;
 }
 footer p {

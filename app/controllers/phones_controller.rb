@@ -5,7 +5,7 @@ class PhonesController < ApplicationController
   before_action :authenticated, only: [:admin]
   
   def index
-    @phones = Phone.search(params[:search]).page(params[:page]).per_page(10)
+    @phones = Phone.search(params[:search]).sorted.page(params[:page]).per_page(10)
   end
 
   def show
@@ -21,7 +21,7 @@ class PhonesController < ApplicationController
       respond_to do |format|
         format.html {
           flash[:success] = "Phone succesful added"
-          redirect_to new_phone_path
+          redirect_to root_path
         }
         format.js {}
       end
@@ -79,7 +79,7 @@ class PhonesController < ApplicationController
     end
 
     def all_phones
-      @phones = Phone.page(params[:page]).per_page(50)
+      @phones = Phone.page(params[:page]).per_page(10).sorted
     end
 
     def authenticated

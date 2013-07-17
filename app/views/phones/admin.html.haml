@@ -1,4 +1,3 @@
-#message
 .search-block
   = render 'search'
 #new-phone
@@ -7,22 +6,26 @@
     .offset1
       %h2 Administration page
     .span7
-      %table.table
-        %thead
-          %tr
-            %th Name
-            %th Phone
-            %th 
-        - @phones.each do |phone|
-          %tr
-            %td= phone.name
-            %td= phone.phone
-            %td
-              = link_to "Edit", edit_phone_path(phone), remote: true
-              = link_to "Delete", phone, confirm: "Are you sure?",method: :delete, remote: true
-      /= will_paginate @phones, renderer: BootstrapPagination::Rails
+      - if @phones.length == 0
+        %h4 Phones not found by this name
+      -else
+        %table.table
+          %thead
+            %tr
+              %th Name
+              %th Phone
+              %th 
+          - @phones.each do |phone|
+            %tr
+              %td= phone.name
+              %td= phone.phone
+              %td
+                = link_to "Edit", edit_phone_path(phone), remote: true
+                = link_to "Delete", phone, confirm: "Are you sure?",method: :delete, remote: true
+        = will_paginate @phones, inner_window: 2, outer_window: 2, renderer: BootstrapPagination::Rails
       #upload
         %hr
         #upload-link
-          %p To add data from file click this link (format: doc, txt):
+          To add data from file click this link:
+          %br ( format: doc, txt; each string like: Egor Vodenov (456) 456-45-45 )
           %h4= link_to "Upload the file with phone base", upload_path, id: "upload-link", remote: true

@@ -1,5 +1,7 @@
 class Phone < ActiveRecord::Base
 
+  scope :sorted, -> { order(:name) }
+
   validates :name, presence: true
   validates :phone, presence: true
 

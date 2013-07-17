@@ -1,19 +1,5 @@
 class UploadsController < ApplicationController
 
-  # def file_upload  
-  #   respond_to do |format|
-  #     format.html {
-  #       require 'fileutils'
-  #       tmp = params[:file_upload][:file].tempfile
-  #       file = File.join("public", params[:file_upload][:file].original_filename)
-  #       FileUtils.cp tmp.path, file
-  #       # YOUR PARSING JOB
-  #       FileUtils.rm file
-  #     }
-  #     format.js {}
-  #   end
-  # end
-
   def create
     respond_to do |format|
       format.html {
