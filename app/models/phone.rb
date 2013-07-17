@@ -7,7 +7,9 @@ class Phone < ActiveRecord::Base
 
   def self.search(search)
     if search
-      where('name LIKE ?', "%#{search}%")
+      # Added ILIKE for Heroku(PostgreSQL). 
+      # For SQLite, MySQL use LIKE
+      where('name ILIKE ?', "%#{search}%")
     else
       all
     end
